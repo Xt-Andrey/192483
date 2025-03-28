@@ -2,42 +2,42 @@ import java.util.Scanner;
 
 public class MuyMalHecho {
     public static void main(String[] args) throws Exception {
-        Scanner S = new Scanner(System.in);
+        Scanner miobj = new Scanner(System.in);
         int C = 0;
 
         System.out.println("Número de usuarios a ingresar:");
-        int N = S.nextInt();
-        S.nextLine();
+        int numUsuaro = miobj.nextInt();
+        miobj.nextLine();
 
         int E1 = 0, E2 = 0, E3 = 0;
         String N1 = "", N2 = "", N3 = "";
 
-        while (C < N) {
+        while (C < numUsuaro) {
             System.out.println("Nombre del usuario:");
-            String U = S.nextLine();
+            String nombreUsuario = miobj.nextLine();
 
             System.out.println("Edad del usuario:");
-            int A = S.nextInt();
-            S.nextLine();
+            int edadUsuario = miobj.nextInt();
+            miobj.nextLine();
 
             if (C == 0) {
-                N1 = U;
-                E1 = A;
+                N1 = nombreUsuario;
+                E1 = edadUsuario;
             } else if (C == 1) {
-                N2 = U;
-                E2 = A;
+                N2 = nombreUsuario;
+                E2 = edadUsuario;
             } else if (C == 2) {
-                N3 = U;
-                E3 = A;
+                N3 = nombreUsuario;
+                E3 = edadUsuario;
             }
 
-            if (A >= 18) {
-                System.out.println(U + " es mayor de edad.");
+            if (edadUsuario >= 18) {
+                System.out.println(nombreUsuario + " es mayor de edad.");
             } else {
-                System.out.println(U + " es menor de edad.");
+                System.out.println(nombreUsuario + " es menor de edad.");
             }
 
-            if (A > 120 || A < 1) {
+            if (edadUsuario > 120 || edadUsuario < 1) {
                 System.out.println("Edad no válida.");
             }
 
